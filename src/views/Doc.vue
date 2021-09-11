@@ -89,4 +89,7 @@ export default {
   main {
     overflow: auto;
   }
+  body{
+    min-width: 300px;
+  }
 </style>

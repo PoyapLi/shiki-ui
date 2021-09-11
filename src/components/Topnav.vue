@@ -45,7 +45,7 @@ export default {
     white-space: nowrap;
     flex-wrap: nowrap;
     > li {
-      margin: 0 1em;
+      margin: -2px 1em;
     }
   }
   > .toggleAside {
