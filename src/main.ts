@@ -2,18 +2,18 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import './index.css'
 import {createWebHashHistory, createRouter} from 'vue-router'
-import Poyap from './components/Poyap.vue'
-import Poyap2 from './components/Poyap2.vue'
+import Home from './views/Home.vue'
+import Doc from './views/Doc.vue'
 
 const history = createWebHashHistory()
 const router = createRouter({
     history: history,
     routes: [
         {path:'/',
-            component: Poyap
+            component: Home
         },
         {path:'/xxx',
-            component: Poyap2
+            component: Doc
         }
     ]
 })
