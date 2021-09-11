@@ -1,3 +1,3 @@
 <template>
-  <div>我的组件</div>
+  <div>我的组件poyap1</div>
 </template>
