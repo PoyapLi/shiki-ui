@@ -45,9 +45,20 @@ export default {
       margin: 0 1em;
     }
   }
+  > .toggleAside {
+    width: 24px;
+    height: 24px;
+    background: red;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+  }
   @media (max-width: 500px){
     > .menu{display: none}
     > .logo{margin: 0 auto}
+    > .toggleAside{display: inline-block}
   }
 }
 </style>
