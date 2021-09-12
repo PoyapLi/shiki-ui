@@ -1,6 +1,7 @@
 <template>
   <button class="shiki-button"
           :class="classes"
+          :disabled="disabled"
   >
     <slot/>
   </button>
@@ -22,7 +23,11 @@ export default {
     level: {
       type: String,
       default: 'normal',
-    }
+    },
+    disabled:{
+      type:Boolean,
+      default:false,
+    },
   },
   setup(props) {
     const {theme, size, level} = props;
@@ -30,7 +35,7 @@ export default {
       return {
         [`shiki-theme-${theme}`]: theme,
         [`shiki-size-${size}`]: size,
-        [`shiki-level-${level}`]: size,
+        [`shiki-level-${level}`]: level,
       };
     });
     return {classes};
@@ -47,6 +52,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .shiki-button {
   box-sizing: border-box;
   height: $h;
@@ -167,6 +173,21 @@ $red: red;
       &:focus {
         color: darken($red, 10%);
       }
+    }
+  }
+  &.shiki-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.shiki-theme-link, &.shiki-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 }
