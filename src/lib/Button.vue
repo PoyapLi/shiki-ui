@@ -53,10 +53,12 @@ $blue: #40a9ff;
 $radius: 4px;
 $red: red;
 $grey: grey;
+$yellow:#e4bf11;
 .shiki-button {
+  margin-top: 5px;
   box-sizing: border-box;
   height: $h;
-  padding: 0 12px;
+  padding: 0 8px;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -106,17 +108,57 @@ $grey: grey;
       background: darken(white, 5%);
     }
   }
+  &.shiki-theme-dashed{
+    border: 1px dashed $grey;
+    &:hover, &:focus {
+      border-color: $blue;
+    }
+    &.shiki-level-main {
+      color: $blue;
+
+      &:hover,
+      &:focus {
+        background: darken(white, 5%) ;
+        color: darken($blue, 10%);
+      }
+    }
+
+    &.shiki-level-danger {
+      color: $red;
+
+      &:hover,
+      &:focus {
+        color: darken($red, 10%);
+        border-color: darken($red, 10%);
+      }
+    }
+    &.shiki-level-warning {
+      color: $yellow;
+
+      &:hover,
+      &:focus {
+        color: darken($yellow, 10%);
+        border-color: darken($yellow, 10%);
+      }
+    }
+  }
 
   &.shiki-size-big {
     font-size: 24px;
     height: 48px;
-    padding: 0 16px;
+    padding: 0 12px;
+
   }
 
   &.shiki-size-small {
     font-size: 12px;
-    height: 20px;
+    height: 24px;
     padding: 0 4px;
+  }
+  &.shiki-size-superbig {
+    font-size:32px;
+    height: 64px;
+    padding: 0 16px;
   }
 
   &.shiki-theme-button {
@@ -143,6 +185,15 @@ $grey: grey;
         border-color: darken($red, 10%);
       }
     }
+    &.shiki-level-warning {
+      color: $yellow;
+
+      &:hover,
+      &:focus {
+        color: darken($yellow, 10%);
+        border-color: darken($yellow, 10%);
+      }
+    }
   }
 
   &.shiki-theme-link {
@@ -152,6 +203,14 @@ $grey: grey;
       &:hover,
       &:focus {
         color: darken($red, 10%);
+      }
+    }
+    &.shiki-level-warning {
+      color: $yellow;
+
+      &:hover,
+      &:focus {
+        color: darken($yellow, 10%);
       }
     }
   }
@@ -174,6 +233,14 @@ $grey: grey;
         color: darken($red, 10%);
       }
     }
+    &.shiki-level-warning {
+      color: $yellow;
+
+      &:hover,
+      &:focus {
+        color: darken($yellow, 10%);
+      }
+    }
   }
   &.shiki-theme-button {
     &[disabled] {
@@ -188,6 +255,13 @@ $grey: grey;
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
+    }
+  }
+  &.shiki-theme-dashed{
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      border-color: $grey;
     }
   }
 }
