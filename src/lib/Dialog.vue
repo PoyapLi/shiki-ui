@@ -1,21 +1,23 @@
 <template>
   <template v-if="visible">
-    <div class="shiki-dialog-overlay" @click="closeOnClickOverlay"></div>
-    <div class="shiki-dialog-wrapper">
-      <div class="shiki-dialog">
-        <header>
-          <slot name="title"/>
-          <span @click="close" class="shiki-dialog-close"></span>
-        </header>
-        <main>
-          <slot name="content" />
-        </main>
-        <footer>
-          <Button level="main" @click="ok">OK</Button>
-          <Button @click="cancel">Cancel</Button>
-        </footer>
+    <Teleport to="body">
+      <div class="shiki-dialog-overlay" @click="closeOnClickOverlay"></div>
+      <div class="shiki-dialog-wrapper">
+        <div class="shiki-dialog">
+          <header>
+            <slot name="title"/>
+            <span @click="close" class="shiki-dialog-close"></span>
+          </header>
+          <main>
+            <slot name="content" />
+          </main>
+          <footer>
+            <Button level="main" @click="ok">OK</Button>
+            <Button @click="cancel">Cancel</Button>
+          </footer>
+        </div>
       </div>
-    </div>
+    </Teleport>
   </template>
 </template>
 
