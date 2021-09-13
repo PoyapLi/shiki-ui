@@ -1,7 +1,7 @@
 <template>
   <template v-if="visible">
     <Teleport to="body">
-      <div class="shiki-dialog-overlay" @click="closeOnClickOverlay"></div>
+      <div class="shiki-dialog-overlay" @click="onClickOverlay"></div>
       <div class="shiki-dialog-wrapper">
         <div class="shiki-dialog">
           <header>
