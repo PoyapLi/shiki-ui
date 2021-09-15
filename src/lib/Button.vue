@@ -113,40 +113,6 @@ $yellow:#e4bf11;
       background: darken(white, 5%);
     }
   }
-  &.shiki-theme-dashed{
-    border: 1px dashed $grey;
-    &:hover, &:focus {
-      border-color: $blue;
-    }
-    &.shiki-level-main {
-      color: $blue;
-
-      &:hover,
-      &:focus {
-        background: darken(white, 5%) ;
-        color: darken($blue, 10%);
-      }
-    }
-
-    &.shiki-level-danger {
-      color: $red;
-
-      &:hover,
-      &:focus {
-        color: darken($red, 10%);
-        border-color: darken($red, 10%);
-      }
-    }
-    &.shiki-level-warning {
-      color: $yellow;
-
-      &:hover,
-      &:focus {
-        color: darken($yellow, 10%);
-        border-color: darken($yellow, 10%);
-      }
-    }
-  }
 
   &.shiki-size-big {
     font-size: 24px;
@@ -190,15 +156,6 @@ $yellow:#e4bf11;
         border-color: darken($red, 10%);
       }
     }
-    &.shiki-level-warning {
-      color: $yellow;
-
-      &:hover,
-      &:focus {
-        color: darken($yellow, 10%);
-        border-color: darken($yellow, 10%);
-      }
-    }
   }
 
   &.shiki-theme-link {
@@ -208,14 +165,6 @@ $yellow:#e4bf11;
       &:hover,
       &:focus {
         color: darken($red, 10%);
-      }
-    }
-    &.shiki-level-warning {
-      color: $yellow;
-
-      &:hover,
-      &:focus {
-        color: darken($yellow, 10%);
       }
     }
   }
@@ -238,14 +187,6 @@ $yellow:#e4bf11;
         color: darken($red, 10%);
       }
     }
-    &.shiki-level-warning {
-      color: $yellow;
-
-      &:hover,
-      &:focus {
-        color: darken($yellow, 10%);
-      }
-    }
   }
   &.shiki-theme-button {
     &[disabled] {
@@ -262,13 +203,7 @@ $yellow:#e4bf11;
       color: $grey;
     }
   }
-  &.shiki-theme-dashed{
-    &[disabled] {
-      cursor: not-allowed;
-      color: $grey;
-      border-color: $grey;
-    }
-  }
+
   > .shiki-loadingIndicator{
     width: 14px;
     height: 14px;

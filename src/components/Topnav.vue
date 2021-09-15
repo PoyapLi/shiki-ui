@@ -1,7 +1,7 @@
 <template>
   <div class="topnav">
-    <router-link to="/" class="logo" >
-      <svg class="icon" >
+    <router-link to="/" class="logo">
+      <svg class="icon">
         <use xlink:href="#icon-ryougi"></use>
       </svg>
     </router-link>
@@ -16,24 +16,24 @@
   </div>
 </template>
 
-<script lang="ts" >
-import {inject,Ref} from 'vue';
+<script lang="ts">
+import {inject, Ref} from 'vue';
 
 export default {
-  props:{
-    toggleMenuButtonVisible:{
+  props: {
+    toggleMenuButtonVisible: {
       type: Boolean,
       default: false,
     }
   },
-  setup(){
-    const menuVisible = inject<Ref<boolean>>('menuVisible')
+  setup() {
+    const menuVisible = inject<Ref<boolean>>('menuVisible');
     const toggleMenu = () => {
-      menuVisible.value = !menuVisible.value
-    }
-    return {toggleMenu}
+      menuVisible.value = !menuVisible.value;
+    };
+    return {toggleMenu};
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -47,22 +47,28 @@ export default {
   z-index: 20;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(135deg, rgba(148, 231, 233, 1) 0%, rgba(88, 185, 214, 1) 100%);
+
   > .logo {
     max-width: 6em;
     margin-right: auto;
+
     > svg {
       width: 32px;
       height: 32px;
     }
   }
+
   > .menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
+
     > li {
       margin: -2px 1em;
     }
   }
+
   > .toggleAside {
     width: 24px;
     height: 24px;
@@ -74,10 +80,17 @@ export default {
     background: fade-out(black, 0.9);
     border-radius: 4px;
   }
-  @media (max-width: 500px){
-    > .menu{display: none}
-    > .logo{margin: 0 auto}
-    > .toggleAside{display: inline-block}
+
+  @media (max-width: 500px) {
+    > .menu {
+      display: none
+    }
+    > .logo {
+      margin: 0 auto
+    }
+    > .toggleAside {
+      display: inline-block
+    }
   }
 }
 </style>

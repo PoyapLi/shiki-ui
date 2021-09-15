@@ -8,4 +8,4 @@
 
 [查看源码](github/poyapli/xxx)
 
-下一节：[安装]("#/doc/install")
+下一节：[安装](#/doc/install)

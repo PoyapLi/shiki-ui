@@ -23,7 +23,6 @@ export const openDialog = (options) => {
                     },
                     ok,
                     cancel,
-                    closeOnClickOverlay,
                 }, {
                     title, content
                 });
