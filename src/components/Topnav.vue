@@ -1,10 +1,10 @@
 <template>
   <div class="topnav">
-    <div class="logo" >
+    <router-link to="/" class="logo" >
       <svg class="icon" >
         <use xlink:href="#icon-ryougi"></use>
       </svg>
-    </div>
+    </router-link>
     <ul class="menu">
       <li>
         <router-link to="/doc">文档</router-link>
@@ -44,7 +44,7 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 20;
   justify-content: center;
   align-items: center;
   > .logo {
