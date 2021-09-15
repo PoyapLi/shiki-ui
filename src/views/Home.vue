@@ -38,6 +38,7 @@ $blue:#1f7d99;
 $color: #367182;
 .topnavAndBanner{
   background: linear-gradient(135deg, rgba(148,231,233,1) 0%, rgba(88,185,214,1) 100%);
+  clip-path: ellipse(80% 60% at 50% 40%);
 }
 .features {
   > svg {
