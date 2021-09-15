@@ -2,7 +2,7 @@
   <div class="topnav">
     <router-link to="/" class="logo">
       <svg class="icon">
-        <use xlink:href="#icon-ryougi"></use>
+        <use xlink:href="#icon-chilun"></use>
       </svg>
     </router-link>
     <ul class="menu">
@@ -44,10 +44,10 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, rgba(148, 231, 233, 1) 0%, rgba(88, 185, 214, 1) 100%);
+  z-index: 12;
 
   > .logo {
     max-width: 6em;

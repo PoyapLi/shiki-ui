@@ -4,9 +4,9 @@
       <Topnav/>
       <div class="banner">
         <h1>两仪 UI</h1>
-        <h2>一个不怎么厉害的 UI 框架</h2>
+        <h2>一个还算可以的 UI 框架</h2>
         <p class="actions">
-          <a href="#">GitHub</a>
+          <a href="https://github.com/PoyapLi">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
@@ -33,7 +33,7 @@
           <use xlink:href="#icon-light"></use>
         </svg>
         <h3>代码易读</h3>
-        <p>每个组件的源代码都极其简洁</p>
+        <p>每个组件的源码都比较简洁</p>
       </li>
     </ul>
 
