@@ -5,13 +5,14 @@
 在您的代码中写入下面的代码
 
 ```
-import {Button, Tabs, Switch, Dialog} from "shiki-ui";
+import {Button, Tabs, Switch, Dialog, openDialog} from "shiki-ui";
 import "shiki-ui/dist/lib/shiki.css";
 ```
 
 现在，您可以使用我提供的组件了。
 
 ## Vue 单文件组件
+*注意：组件中的显示的代码，引入部分请自行改为如 `import { Button } from "shiki-ui";`*
 
 代码示例1 Button ：
 
@@ -26,7 +27,7 @@ import {Button, Tabs, Switch, Dialog, openDialog} from "shiki-ui";
 import "shiki-ui/dist/lib/shiki.css";
 export default {
   name: 'App',
-  components: {Button, Tabs, Switch, Dialog},
+  components: { Button },
 }
 </script>
 ```
@@ -43,7 +44,7 @@ import {Button, Tabs, Switch, Dialog, openDialog} from "shiki-ui";
 import "shiki-ui/dist/lib/shiki.css";
 export default {
   name: 'App',
-  components: {Button, Tabs, Switch, Dialog},
+  components: { Switch },
   data(){
     return{
         switchValue: false,
@@ -68,7 +69,7 @@ import {Button, Tabs, Switch, Dialog, openDialog} from "shiki-ui";
 import "shiki-ui/dist/lib/shiki.css";
 export default {
   name: 'App',
-  components: {Button, Tabs, Switch, Dialog},
+  components: { Tabs },
   data(){
     return{
         tabSelected: 'tab1',
@@ -90,7 +91,7 @@ import {Button, Tabs, Switch, Dialog, openDialog} from "shiki-ui";
 import "shiki-ui/dist/lib/shiki.css";
 export default {
   name: 'App',
-  components: {Button, Tabs, Switch, Dialog},
+  components: { Dialog, Button },
   methods:{
     open(){
         openDialog({title:'标题', content:'内容'})
