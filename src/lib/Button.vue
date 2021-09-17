@@ -149,11 +149,6 @@ $white:white;
     height: 24px;
     padding: 0 4px;
   }
-  &.shiki-size-superbig {
-    font-size:32px;
-    height: 64px;
-    padding: 0 16px;
-  }
 
   &.shiki-theme-button {
     &.shiki-level-main {
