@@ -2,10 +2,19 @@
   <div class="demo">
     <h2>{{ component.__sourceCodeTitle }}</h2>
     <div class="demo-component">
-      <component :is="component" />
+      <component :is="component"/>
     </div>
     <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+      <Button @click="showCode" v-if="!codeVisible">显示代码
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-down"></use>
+        </svg>
+      </Button>
+      <Button @click="hideCode" v-else>隐藏代码
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-up"></use>
+        </svg>
+      </Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html"/>
@@ -15,35 +24,47 @@
 
 <script lang="ts">
 import Button from '../lib/Button.vue';
-import  'prismjs';
-import 'prismjs/themes/prism.css'
+import 'prismjs';
+import 'prismjs/themes/prism.css';
 import {computed, ref} from 'vue';
-const Prism = (window as any).Prism
+
+const Prism = (window as any).Prism;
 
 export default {
-  components:{
+  components: {
     Button
   },
-  props:{
+  props: {
     component: Object
   },
-  setup(props){
-    const html = computed(()=>{
-      return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
-    })
-    const codeVisible = ref(false)
-    const toggleCode = ()=>{
-      codeVisible.value = !codeVisible.value
-    }
+  setup(props) {
+    const html = computed(() => {
+      return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html');
+    });
+    const codeVisible = ref(false);
+    const showCode = () => {
+      codeVisible.value = true;
+    };
+    const hideCode = () => {
+      codeVisible.value = false;
+    };
     return {
-      Prism, html, codeVisible, toggleCode
-    }
+      Prism, html, codeVisible, showCode, hideCode
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 .demo {
   border: 1px solid $border-color;
   margin: 16px 0 32px;
