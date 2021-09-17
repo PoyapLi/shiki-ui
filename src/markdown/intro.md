@@ -8,6 +8,6 @@
 
 > ### Version: 0.0.2 (2021/09/17)
 > 
-> 发布首版 [查看源码](github/poyapli/xxx)
+> 发布首版 [查看源码](https://github.com/PoyapLi/shiki-ui)
 
 下一节：[安装](#/doc/install)
